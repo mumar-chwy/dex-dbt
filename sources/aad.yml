@@ -1,0 +1,59 @@
+version: 2
+sources:
+  - name: aad
+    database: EDLDB
+    schema: AAD
+    tables:
+      - name: t_pick_container
+        description: "Pick container details for fulfillment operations."
+        columns:
+          - name: WH_ID
+            description: "Warehouse ID."
+          - name: CONTAINER_ID
+            description: "Container ID."
+          - name: CONTAINER_TYPE
+            description: "Container type."
+          - name: PROCESS_PATH
+            description: "Process path."
+          - name: PROFILE_NAME
+            description: "Profile name."
+          - name: ORDER_NUMBER
+            description: "Order number."
+          - name: STATUS
+            description: "Container status."
+          - name: MANIFEST_STATUS
+            description: "Manifest status."
+          - name: FULFILLMENT_STATUS
+            description: "Fulfillment status."
+          - name: PROMISED_DATE
+            description: "Promised date."
+      - name: t_pick_detail
+        description: "Pick detail records for fulfillment operations."
+        columns:
+          - name: WH_ID
+            description: "Warehouse ID."
+          - name: CONTAINER_ID
+            description: "Container ID."
+          - name: PLANNED_QUANTITY
+            description: "Planned quantity."
+          - name: TYPE
+            description: "Pick type."
+          - name: STATUS
+            description: "Pick status."
+      - name: t_order
+        description: "Order master data."
+        columns:
+          - name: ORDER_NUMBER
+            description: "Order number."
+          - name: WH_ID
+            description: "Warehouse ID."
+          - name: AUTOSHIP
+            description: "Autoship flag."
+      - name: t_tran_log
+        description: "transactions"
+      - name: t_location
+        description: "Korber locations"
+      - name: t_stored_item
+        description: "Item location storage info"
+      - name: t_reason
+        description: "Reson Code descriptions"
