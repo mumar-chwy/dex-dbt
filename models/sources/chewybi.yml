@@ -4,7 +4,7 @@ sources:
     database: EDLDB
     schema: CHEWYBI
     tables:
-      - name: product
+      - name: products
         description: "Product master data with attributes, hierarchy, pricing, and merchandising details."
         columns:
         - name: PRODUCT_KEY
