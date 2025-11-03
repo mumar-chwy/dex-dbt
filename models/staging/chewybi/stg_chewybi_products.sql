@@ -5,4 +5,3 @@ from source
 where
     product_merch_classification1 = 'Specialty'
     and product_merch_classification4 ilike '%Live%'
-    limit 100
