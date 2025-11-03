@@ -1,0 +1,15 @@
+version: 2
+sources:
+  - name: fulfillment_optimization_sandbox
+    database: EDLDB
+    schema: FULFILLMENT_OPTIMIZATION_SANDBOX
+    tables:
+      - name: warehouses
+        description: "Active warehouses for fulfillment optimization."
+        columns:
+          - name: wh_id
+            description: "Warehouse ID."
+          - name: is_active
+            description: "Active flag."
+      - name: common_date
+        description: "Date and calendar information for warehouses"

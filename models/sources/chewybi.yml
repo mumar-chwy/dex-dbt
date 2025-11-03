@@ -1,0 +1,218 @@
+version: 2
+sources:
+  - name: chewybi
+    database: EDLDB
+    schema: CHEWYBI
+    tables:
+      - name: product
+        description: "Product master data with attributes, hierarchy, pricing, and merchandising details."
+        columns:
+        - name: PRODUCT_KEY
+          description: "Unique surrogate key for the product."
+        - name: PRODUCT_ID
+          description: "Internal product ID."
+        - name: PRODUCT_PART_NUMBER
+          description: "Product part number (SKU)."
+        - name: PRODUCT_TYPE
+          description: "Type or classification of the product."
+        - name: PRODUCT_NAME
+          description: "Product name."
+        - name: PRODUCT_MANUFACTURER_NAME
+          description: "Name of the product manufacturer."
+        - name: PRODUCT_MANUFACTURER_PART_NUMBER
+          description: "Manufacturer-specific part number."
+        - name: PRODUCT_CATEGORY_LEVEL1
+          description: "Top-level product category."
+        - name: PRODUCT_CATEGORY_LEVEL2
+          description: "Second-level product category."
+        - name: PRODUCT_CATEGORY_LEVEL3
+          description: "Third-level product category."
+        - name: PRODUCT_PRICE
+          description: "Current product price."
+        - name: PRODUCT_LIST_PRICE
+          description: "Original or list price of the product."
+        - name: PRODUCT_PUBLISHED_FLAG
+          description: "Indicates if the product is published and available for sale."
+        - name: PRODUCT_DISCONTINUED_FLAG
+          description: "Indicates if the product is discontinued."
+        - name: PRODUCT_START_DTTM
+          description: "Start date time when product became active."
+        - name: PRODUCT_END_DTTM
+          description: "End date time when product became inactive or discontinued."
+        - name: PRODUCT_WEIGHT
+          description: "Weight of the product."
+        - name: PRODUCT_WEIGHT_UOM
+          description: "Unit of measure for product weight."
+        - name: PRODUCT_LENGTH
+          description: "Length of the product."
+        - name: PRODUCT_WIDTH
+          description: "Width of the product."
+        - name: PRODUCT_HEIGHT
+          description: "Height of the product."
+        - name: PRODUCT_SIZE_UOM
+          description: "Unit of measure for product dimensions."
+        - name: PRODUCT_PACKAGED_WEIGHT
+          description: "Packaged product weight."
+        - name: PRODUCT_PACKAGED_LENGTH
+          description: "Packaged product length."
+        - name: PRODUCT_PACKAGED_WIDTH
+          description: "Packaged product width."
+        - name: PRODUCT_PACKAGED_HEIGHT
+          description: "Packaged product height."
+        - name: PRODUCT_IS_FOOD_FLAG
+          description: "Indicates if the product is a food item."
+        - name: PRODUCT_RX_REQUIRED_FLAG
+          description: "Indicates if a prescription is required."
+        - name: PRODUCT_IS_CONSUMABLE_FLAG
+          description: "Indicates if the product is consumable."
+        - name: PRODUCT_PARENT_ID
+          description: "Parent product ID if part of a hierarchy."
+        - name: PRODUCT_PARENT_PARTNUMBER
+          description: "Parent product part number."
+        - name: PRODUCT_ABC_CODE
+          description: "ABC classification for inventory/category management."
+        - name: PRODUCT_MERCH_CLASSIFICATION1
+          description: "Merchandising classification level 1."
+        - name: PRODUCT_MERCH_CLASSIFICATION2
+          description: "Merchandising classification level 2."
+        - name: PRODUCT_MERCH_CLASSIFICATION3
+          description: "Merchandising classification level 3."
+        - name: CARTONIZATION_FLAG
+          description: "Indicates if product is eligible for cartonization."
+        - name: PRODUCT_MERCH_CLASSIFICATION4
+          description: "Merchandising classification level 4."
+      - name: order_line_measures
+        description: "Order line and shipment level details with timestamps, quantities, and customer info."
+        columns:
+          - name: CUSTOMER_ADDRESS_KEY
+            description: "Customer address surrogate key."
+          - name: CUSTOMER_KEY
+            description: "Customer surrogate key."
+          - name: FULFILLMENT_CENTER_KEY
+            description: "Fulfillment center surrogate key."
+          - name: LEGAL_COMPANY_DESCRIPTION
+            description: "Legal company / entity associated with the order."
+          - name: ORDER_KEY
+            description: "Order surrogate key."
+          - name: ORDER_LINE_CREATED_DTTM_EST
+            description: "Timestamp when the order line was created (EST)."
+          - name: ORDER_LINE_DELIVERY_DTTM_EST
+            description: "Estimated delivery timestamp (EST)."
+          - name: ORDER_LINE_ESTIMATED_AVAILABILITY_DTTM_EST
+            description: "Timestamp when order line is expected to be available (EST)."
+          - name: ORDER_LINE_ID
+            description: "Unique identifier for the order line."
+          - name: ORDER_LINE_QUANTITY
+            description: "Ordered quantity for the line item."
+          - name: ORDER_LINE_RELEASED_DTTM_EST
+            description: "Timestamp when the order line was released (EST)."
+          - name: ORDER_LINE_SHIPMENT_QUANTITY
+            description: "Quantity shipped for the order line."
+          - name: ORDER_LINE_SHIPPED_DTTM_EST
+            description: "Timestamp when the order line was shipped (EST)."
+          - name: ORDER_PLACED_DATE
+            description: "Date when the order was placed."
+          - name: PRODUCT_COMPANY_DESCRIPTION
+            description: "Product company / brand description."
+          - name: PRODUCT_KEY
+            description: "Product surrogate key."
+          - name: SHIPMENT_SHIPPED_DTTM
+            description: "Shipment shipped timestamp."
+          - name: SHIPMENT_SHIPPED_DTTM_EST
+            description: "Shipment shipped timestamp in EST."
+          - name: SHIPMENT_TRACKING_NUMBER
+            description: "Tracking number associated with the shipment."
+      - name: shipment_transaction_details
+        description: "Actual shipment, routing, and delivery performance details."
+        columns:
+        - name: ACTUAL_CUTOFF_TIME
+          description: "Actual cutoff time for the shipment."
+        - name: ACTUAL_PULLTIME
+          description: "Time when the order was actually pulled from inventory."
+        - name: ACTUAL_SHIP_ROUTE
+          description: "Actual shipping route used."
+        - name: ACTUAL_TRANSIT_DAYS
+          description: "Actual number of transit days."
+        - name: ACTUAL_ZONE
+          description: "Final delivery zone."
+        - name: CARRIER_CODE
+          description: "Carrier code used for shipping."
+        - name: FFMCENTER_NAME
+          description: "Fulfillment center name."
+        - name: ORDER_ID
+          description: "Order identifier."
+        - name: ORDER_LINE_ID
+          description: "Order line identifier."
+        - name: ORDER_LINE_QUANTITY
+          description: "Quantity ordered for the line."
+        - name: ORDER_LINE_SHIPPED_DTTM
+          description: "Timestamp when the order line shipped."
+        - name: ORDER_PLACED_DTTM
+          description: "Timestamp when the order was placed."
+        - name: POSTCODE
+          description: "Destination postal code."
+        - name: PRODUCT_COMPANY_DESCRIPTION
+          description: "Product company / brand description."
+        - name: PRODUCT_ID
+          description: "Internal product ID."
+        - name: PRODUCT_PART_NUMBER
+          description: "Product part number (SKU)."
+        - name: RELEASE_DTTM
+          description: "Timestamp when the order line was released."
+        - name: SHIPMENT_QUANTITY
+          description: "Quantity shipped in the shipment."
+        - name: SHIPMENT_SHIPPED_DTTM
+          description: "Shipment shipped timestamp."
+        - name: SHIPMENT_TRACKING_NUMBER
+          description: "Shipment tracking number."
+      - name: t_customer_address
+        description: "Customer address master data including contact details, geolocation, and status attributes."
+        columns:
+        - name: CUSTOMER_ADDRESS_CITY
+          description: "City of the customer's address."
+        - name: CUSTOMER_ADDRESS_COUNTRY
+          description: "Country of the customer's address."
+        - name: CUSTOMER_ADDRESS_EMAIL1
+          description: "Primary customer email address."
+        - name: CUSTOMER_ADDRESS_EMAIL2
+          description: "Secondary customer email address."
+        - name: CUSTOMER_ADDRESS_FIELD1
+          description: "Custom address attribute field 1."
+        - name: CUSTOMER_ADDRESS_FIELD2
+          description: "Custom address attribute field 2."
+        - name: CUSTOMER_ADDRESS_FIELD3
+          description: "Custom address attribute field 3."
+        - name: CUSTOMER_ADDRESS_FIRST_NAME
+          description: "Customer first name associated with the address."
+        - name: CUSTOMER_ADDRESS_FIRST_ORDER_FLAG
+          description: "Indicates whether this address was used for the customer’s first order."
+        - name: CUSTOMER_ADDRESS_FULL_NAME
+          description: "Full name associated with the customer address."
+        - name: CUSTOMER_ADDRESS_ID
+          description: "Unique identifier for the customer address."
+        - name: CUSTOMER_ADDRESS_KEY
+          description: "Surrogate key for the customer address."
+        - name: CUSTOMER_ADDRESS_LAST_NAME
+          description: "Customer last name associated with the address."
+        - name: CUSTOMER_ADDRESS_SHIPPING_GEOCODE
+          description: "Geocode used for shipping and routing."
+        - name: CUSTOMER_ADDRESS_STATE
+          description: "State or province of the customer's address."
+        - name: CUSTOMER_ADDRESS_STATUS
+          description: "Status of the customer address (e.g., active, inactive)."
+        - name: CUSTOMER_ADDRESS_STREET1
+          description: "Primary street line of the address."
+        - name: CUSTOMER_ADDRESS_STREET2
+          description: "Secondary street line of the address."
+        - name: CUSTOMER_ADDRESS_STREET3
+          description: "Additional street line of the address, if applicable."
+        - name: CUSTOMER_ADDRESS_TYPE
+          description: "Type of address (e.g., shipping, billing)."
+        - name: CUSTOMER_ADDRESS_ZIP
+          description: "ZIP or postal code of the customer address."
+        - name: CUSTOMER_ID
+          description: "Internal customer identifier associated with this address."
+          
+              
+                  
+
