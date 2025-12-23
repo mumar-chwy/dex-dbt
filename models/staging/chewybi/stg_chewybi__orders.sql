@@ -7,7 +7,7 @@
 with 
 source as (
     select * from {{ source('chewybi', 'orders') }}
-    where order_placed_dttm >= current_date - 10
+    where order_placed_dttm_est >= current_date - 10
 ),
 renamed as (
     select

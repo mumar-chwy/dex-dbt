@@ -1,0 +1,10 @@
+version: 2
+sources:
+  - name: cs_sandbox
+    database: EDLDB
+    schema: cs_sandbox
+    tables:
+      - name: vw_contacts_brd_est
+        description: "Contacts Table"   
+      - name: FCT_RRC_LINEITEM_DLY
+        description: "Contacts Table" 

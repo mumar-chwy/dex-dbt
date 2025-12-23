@@ -1,26 +1,21 @@
+
 version: 2
 sources:
-  - name: aad
+  - name: cfs
     database: EDLDB
-    schema: AAD
+    schema: CFS
     tables:
       - name: t_pick_container
-        description: "Pick container details for fulfillment operations."
-      - name: t_pick_container_arch
         description: "Pick container details for fulfillment operations."
       - name: t_pick_detail
         description: "Pick detail records for fulfillment operations."
       - name: t_order
         description: "Order master data."
-      - name: t_tran_log
-        description: "transactions"
       - name: t_location
         description: "Korber locations"
       - name: t_stored_item
         description: "Item location storage info"
       - name: t_reason
         description: "Reson Code descriptions"
-      - name: v_pick_container_cutoff
-        description: "Reson Code descriptions"
-      - name: v_pick_container_dates
-        description: "Reson Code descriptions"
+      - name: t_tran_log
+        description: "CFS wms transaction log"
