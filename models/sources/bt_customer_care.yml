@@ -1,0 +1,8 @@
+version: 2
+sources:
+  - name: bt_customer_care
+    database: EDLDB
+    schema: bt_customer_care
+    tables:
+      - name: fct_conversation_summaries 
+        description: "PCR Table"   

@@ -1,0 +1,8 @@
+version: 2
+sources:
+  - name: sc_sandbox
+    database: EDLDB
+    schema: sc_sandbox
+    tables:
+      - name: ORDER_AGING_GENERIC_EMERGENTEVENTS 
+        description: "PCR Table"   

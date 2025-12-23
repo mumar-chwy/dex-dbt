@@ -1,0 +1,8 @@
+version: 2
+sources:
+  - name: rxp_diet_rx_usage
+    database: EDLDB
+    schema: rxp_diet_rx_usage
+    tables:
+      - name: rx_usage
+        description: "Product master data with attributes, hierarchy, pricing, and merchandising details."

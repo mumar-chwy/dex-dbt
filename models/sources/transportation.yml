@@ -1,8 +1,0 @@
-version: 2
-sources:
-  - name: BT_SC_TRANSPORTATION
-    database: EDLDB
-    schema: BT_SC_TRANSPORTATION
-    tables:
-      - name: CARRIER_TRACKING_EVENTS
-        description: "Product master data with attributes, hierarchy, pricing, and merchandising details."   

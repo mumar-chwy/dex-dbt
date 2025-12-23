@@ -13,12 +13,20 @@ sources:
       - name: t_customer_address
         description: "Customer address master data including contact details, geolocation, and status attributes."
       - name: orders
-        description: "Customer address master data including contact details, geolocation, and status attributes."  
+        description: "Customer address master data including contact details, geolocation, and status attributes."
       - name: shipment_transactions
         description: "Customer address master data including contact details, geolocation, and status attributes."
       - name: customer_full
-        description: "Customer address master data including contact details, geolocation, and status attributes." 
+        description: "Customer address master data including contact details, geolocation, and status attributes."
       - name: CUSTOMER_ADDRESSES_FULL_GLOBAL
-        description: "Customer address master data including contact details, geolocation, and status attributes."   
+        description: "Customer address master data including contact details, geolocation, and status attributes."
       - name: common_date
-        description: "Customer address master data including contact details, geolocation, and status attributes."        
+        description: "Customer address master data including contact details, geolocation, and status attributes."
+      - name: locations
+        description: "Chewy FC locations"
+      - name: rx_approval_metrics
+        description: "Chewy FC locations"
+      - name: customer_petprofiles
+        description: "Chewy FC locations"
+      - name: zip_time_map
+        description: "Chewy FC locations"
