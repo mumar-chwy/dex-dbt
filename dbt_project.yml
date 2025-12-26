@@ -37,6 +37,9 @@ clean-targets:         # directories to be removed by `dbt clean`
 
 models:
   delivery_experience:
+    +database: EDLDB
+    +schema: dbt_skhalsa
+
     # Applies to all files under models/example/
     example:
       +materialized: table
