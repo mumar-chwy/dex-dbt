@@ -1,0 +1,8 @@
+version: 2
+sources:
+  - name: rxp_diet_rx
+    database: EDLDB
+    schema: rxp_diet_rx
+    tables:
+      - name: rx
+        description: "Product master data with attributes, hierarchy, pricing, and merchandising details."  

@@ -33,6 +33,7 @@ clean-targets:         # directories to be removed by `dbt clean`
 # The configuration below will override this setting for models in the example folder to 
 # instead be materialized as tables. Any models you add to the root of the models folder will 
 # continue to be built as views. These settings can be overridden in the individual model files
+<<<<<<< HEAD
 # using the `{{ config(...) }}` macro.
 
 models:
@@ -45,3 +46,6 @@ models:
     # Applies to all files under models/example/
     example:
       +materialized: table
+=======
+# using the `{{ config(...) }}` macro.
+>>>>>>> 45b84391804da0976d2432d2f15abbd055b2917a

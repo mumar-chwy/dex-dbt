@@ -1,0 +1,10 @@
+version: 2
+sources:
+  - name: order_management_service
+    database: EDLDB
+    schema: order_management_service 
+    tables:
+      - name: orders_raw
+        description: "Contacts Table"
+      - name: orderattr
+        description: "Contacts Table"   
