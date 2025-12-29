@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: chewybi
+    database: edldb
+    schema: chewybi
+    tables:
+      - name: common_date
+        description: "all dates in the calendar"
